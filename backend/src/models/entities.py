@@ -30,6 +30,9 @@ class ControlStudy:
  control_width:float=3
  lsl:float=19.95
  usl:float=20.05
+ segmentation_enabled:bool=False
+ min_segment_length:int=5
+ change_penalty:float=.001
  created_at:str=''
 @dataclass
 class ControlRun:

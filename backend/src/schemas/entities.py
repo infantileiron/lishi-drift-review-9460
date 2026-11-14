@@ -26,6 +26,9 @@ class ControlStudyInput(InputModel):
  control_width:float=Field(default=3,gt=0,le=6)
  lsl:float=19.95
  usl:float=20.05
+ segmentation_enabled:bool=False
+ min_segment_length:int=Field(default=5,ge=1,le=5000)
+ change_penalty:float=Field(default=.001,gt=0,le=1e6)
 class RunInput(InputModel):
  study_id:str
 class ReviewInput(InputModel):
